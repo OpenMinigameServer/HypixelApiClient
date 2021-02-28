@@ -17,6 +17,7 @@ data class HypixelPlayer(
     @Transient var rawJsonNode: JsonNode? = null,
     var rankPlusColor: MinecraftChatColor = MinecraftChatColor.RED,
     var monthlyRankColor: MinecraftChatColor = MinecraftChatColor.GOLD,
+    @JsonProperty("battlePassGlowStatus") val isGlowing: Boolean? = false
 ) {
     @get:JsonIgnore
     val networkLevel: Long
